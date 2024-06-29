@@ -201,7 +201,7 @@ body {
   margin-bottom: 28px;
 }
 .navbar__brand {
-  background-image: url("../icons/Logo.svg");
+  background-image: url("icons/Logo.svg");
   width: 140px;
   height: 22px;
   background-size: contain;
