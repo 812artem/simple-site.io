@@ -879,6 +879,10 @@ body {
     align-items: center;
   }
 
+  .block {
+    height: 100%
+  }
+
 
   .brands__container {
     flex-direction: column;
