@@ -879,6 +879,10 @@ body {
     align-items: center;
   }
 
+  .products__block {
+    width: 100%
+  }
+
   .block__text {
     margin: 0
   }
