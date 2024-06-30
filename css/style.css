@@ -461,6 +461,7 @@ body {
 .block__title {
   margin-bottom: 8px;
   font-size: clamp(24px, 1.5vw, 30px);
+  color: #666666;
 }
 
 .block__span {
