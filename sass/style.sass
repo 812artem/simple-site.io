@@ -1,0 +1,581 @@
+@import "normalizeD.scss"
+
+@font-face
+    font-family: "Roboto"
+    src: url('../fonts/roboto-regular.woff') format('woff')
+    font-weight: normal
+    font-style: normal
+    font-display: swap
+
+a
+    text-decoration: none
+    color: inherit
+
+:root
+    --font-family-base: "Roboto"
+    --font-size-base: clamp(18px, 1.125vw, 20px)
+    --font-size-title: clamp(32px, 2vw, 40px)
+    --color-backgray: #ebebeb
+    --color-text-color: #4C5866
+    --color-text-second: #666666
+    --color-secondary: #7875FE
+
+body
+    font-family: var(--font-family-base)
+
+.header
+    display: flex
+    justify-content: center
+    margin-top: 28px
+    border-bottom: 2px solid lightgray
+    margin-bottom: 60px
+
+.container
+    width: 1200px
+    margin-inline: 165px
+
+.navbar
+    &__row
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        align-items: center
+        margin-bottom: 28px
+
+    &__brand
+        background-image: url('../icons/Logo.svg')
+        width: 140px
+        height: 22px
+        background-size: contain
+        background-repeat: no-repeat
+        margin-right: 50px
+
+    &__menu
+        display: flex
+        flex-wrap: wrap
+        margin-left: auto
+
+    &__hidden
+        display: none
+
+    &__list
+        display: flex
+        column-gap: 60px
+        margin-right: 60px
+        font-family: var(--font-family-base)
+        font-size: var(--font-size-base)
+        color: var(--color-text-color)
+
+.list a:hover
+    color: var(--color-secondary)
+
+.icons
+    display: flex
+    justify-content: center
+    align-items: center
+
+    &__button
+        display: flex
+        justify-content: center
+        padding: 0
+        color: var(--color-text-color)
+        border: none
+        background: transparent
+        &:not(:last-child)
+            margin-right: 26px
+
+// вторая секция
+
+.content
+
+.legend
+    display: flex
+    justify-content: center
+
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: center
+        column-gap: 125px
+    &__desc
+        display: inline-block
+        width: 360px
+    &__title
+        display: inline-block
+        width: 360px
+        font-size: clamp(48px, 3.125vw, 60px)
+        font-weight: 400
+        color: var(--color-text-color)
+        line-height: 100%
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+        letter-spacing: 1px
+        margin-bottom: 30px
+    &__text
+
+        font-weight: 400
+        font-size: 18px
+        line-height: 150%
+        color: #85859b
+        margin-bottom: 30px
+    &__link
+        text-align: center
+        font-weight: 400
+        font-size: var(--font-size-base)
+        color: var(--color-secondary)
+        border: 1px solid var(--color-secondary)
+        padding: 20px 50px
+        width: 255px
+        height: 70px
+
+.legend__link:hover
+    background: var(--color-secondary)
+    color: #ffff
+
+.legend__image
+    width: 100%
+
+.img-desc
+    width: 100%
+    object-fit: cover
+    object-position: center
+    overflow: hidden
+
+// третья секция
+
+.result
+    display: flex
+    justify-content: center
+    background: var(--color-backgray)
+    height: 100%
+    padding-bottom: 60px
+    &__bottom-row
+        display: flex
+        justify-content: center
+        align-items: center
+    &__desc
+        display: inline-block
+        width: 350px
+        height: 445px
+    &__text
+        font-family: var(--font-family-base)
+        font-weight: 400
+        font-size: var(--font-size-base)
+        line-height: 170%
+        color: #85859b
+    &__title
+        display: inline-block
+        width: 350px
+        font-family: var(--font-family-base)
+        font-weight: 400
+        font-size: var(--font-size-title)
+        line-height: 100%
+        color: #666
+        margin-bottom: 20px
+    &__image
+        width: 100%
+    &__img
+        width: 100%
+        object-fit: cover
+
+    &__top-row
+        display: flex
+        justify-content: space-between
+        padding-top: 90px
+        margin-bottom: 90px
+
+.result__textp
+    margin-bottom: 20px
+
+.card
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-right: 30px
+    padding-top: 19px
+    border-top: 1px solid #C0C0C0
+    &:last-child
+        margin-right: 0px
+
+    &__image
+        max-width: 100%
+        height: 100%
+        object-fit: cover
+
+    &__desc
+        width: 160px
+        font-family: var(--font-family-base)
+        font-weight: 400
+        font-size: 18px
+        line-height: 150%
+        color: #85859b
+        text-align: left
+        span
+            font-weight: 500
+            font-size: 18px
+            line-height: 150%
+            color: var(--color-text-color)
+
+.card-text
+    overflow-wrap: break-word
+
+    // Четвертая секция
+
+.products
+    display: flex
+    justify-content: center
+    padding-top: 60px
+    padding-bottom: 60px
+
+    &__container
+        display: flex
+        align-items: center
+        justify-content: center
+        column-gap: 30px
+
+.block
+    width: 255px
+    height: 465px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    &__img
+        width: 100%
+        margin-bottom: 20px
+    &__image
+        width: 100%
+        object-fit: cover
+    &__title
+        margin-bottom: 8px
+        font-size: clamp(24px, 1.5vw, 30px)
+    &__span
+        margin-bottom: 8px
+        font-size: clamp(12px, 0.875vw, 14px)
+        color: #b5b5bd
+    &__desc
+        height: 100%
+
+    &__text
+        font-size: clamp(16px, 1.125vw, 18px)
+        margin-bottom: 20px
+    &__link
+        display: inline-flex
+        align-items: center
+        column-gap: 5px
+        font-size: clamp(16px, 1vw, 20px)
+        color: var(--color-secondary)
+        padding-bottom: 31px
+
+    &__arrow
+        color: currentcolor
+
+    // Пятая секция
+
+.brands
+    display: flex
+    justify-content: center
+    padding: 60px 39px
+    background: var(--color-backgray)
+
+    &__container
+        display: flex
+        justify-content: center
+        align-items: center
+
+    &__logo
+        width: 255px
+        height: 135px
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        margin-right: 30px
+        padding: 20px
+        border: 1px solid #C4C4C4
+        &:last-child
+            margin-right: 0
+
+    .item__link
+
+    .item__img
+        width: 100%
+        height: auto
+        object-fit: cover
+
+    // шестая секция 
+
+.book
+    display: flex
+    justify-content: center
+    padding-top: 90px
+
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__desc
+        width: 445px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    &__title
+        font-size: clamp(34px, 2vw, 40px)
+        font-weight: 400
+        color: var(--color-text-color)
+        line-height: 100%
+        letter-spacing: 1px
+        margin-bottom: 8px
+    &__text
+        width: 350px
+        font-weight: 400
+        font-size: clamp(16px, 1.125vw, 18px)
+        line-height: 150%
+        color: #85859b
+        margin-bottom: 30px
+    &__link
+        text-align: center
+        font-weight: 400
+        font-size: clamp(16px, 1vw, 20px)
+        color: var(--color-secondary)
+        border: 1px solid var(--color-secondary)
+        padding: 20px 50px
+        width: 255px
+        height: 70px
+
+.book__link:hover
+    background: var(--color-secondary)
+    color: #ffff
+
+.img-desc
+    max-width: 100%
+    object-fit: cover
+    object-position: center
+    overflow: hidden
+
+.footer
+    display: flex
+    justify-content: center
+    background: #4C5866
+    height: 59px
+    &__container
+        min-height: 59px
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__brand
+        display: flex
+        justify-content: center
+        align-items: center
+    &__socials
+        display: flex
+        flex-wrap: wrap
+    &__button
+        margin-right: 34px
+
+.pic
+    font-size: 24px
+
+.footer__down
+    height: 21px
+    background: var(--color-backgray)
+    display: flex
+    justify-content: center
+    align-items: center
+    font-family: var(--font-family-base)
+    font-size: clamp(12px, 0.8125vw, 13px)
+    color: #4C5866
+    span
+        color: #BCBCBC
+
+    // АДАПТАЦИЯ.        
+
+@media (max-width: 1200px)
+
+    .container
+        width: 960px
+        margin: 0
+
+    .navbar
+        &__menu
+            display: none
+        &__hidden
+            display: flex
+            justify-content: center
+            margin-bottom: 10px
+
+    .list
+        margin-right: 0
+        column-gap: 111px
+        &__item
+
+    .result
+
+        display: flex
+        justify-content: center
+        &__top-row
+            justify-content: space-evenly
+        &__image
+            width: 50%
+    .card
+        flex-direction: column
+
+    .products
+        display: flex
+        justify-content: center
+        &__container
+            flex-wrap: wrap
+            justify-content: center
+            align-items: center
+        &__block
+            flex-basis: 40%
+            margin: 10px
+            padding: 10px
+    .brands
+        display: flex
+        justify-content: center
+        &__logo
+            margin: 0
+
+    .book
+        &__container
+            justify-content: center
+            padding-inline: 40px
+        &__image
+            width: 100%
+
+@media (max-width: 991px)
+    .container
+        width: 720px
+
+    .navbar__row
+        justify-content: space-around
+
+    .legend
+        display: flex
+        justify-content: center
+    .result
+        &__image
+            width: 100%
+
+    .book
+        display: flex
+        justify-content: center
+        padding-bottom: 60px
+        &__link
+            width: 200px
+            height: 45px
+            padding: 10px 50px
+        &__text
+            display: inline-block
+            width: 200px
+        &__title
+            display: inline-block
+            width: 100%
+    .footer__container
+        justify-content: space-evenly
+
+@media ( max-width: 767px)
+    .container
+        width: 540px
+
+    .navbar__hidden
+        display: none
+
+    .legend
+        margin-bottom: 0
+        &__row
+            column-gap: 5px
+        &__desc
+            display: inline-block
+            width: 250px
+        &__title
+            display: block
+            width: 250px
+        &__link
+            padding: 10px 25px
+            
+
+
+    .img-desc
+        width: 100%
+        height: 100%
+        object-fit: cover
+        position: relative
+        overflow: hidden
+        
+
+@media ( max-width: 575px)
+    .container
+        width: 100%
+
+    .content
+        width: 100%
+
+    .legend
+        margin-bottom: 60px
+        &__container
+            display: flex
+            justify-content: center
+        &__desc
+            display: inline-block
+            width: 100%
+            padding: 5px
+            margin: 0
+            text-align: center
+        &__title
+            width: 100%
+        &__image
+            display: none
+
+    .result
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 100%
+        &__top-row
+            flex-direction: column
+            margin-bottom: 50px
+        &__bottom-row
+            flex-direction: column-reverse
+
+        &__image
+            width: 100%
+            padding-left: 50px
+        &__desc
+            display: block
+            margin-bottom: 20px
+            text-align: center
+        &__card
+            margin: 0
+            padding-bottom: 20px
+    .card__desc
+        display: inline-block
+        width: 100%
+        text-align: center
+
+    .products__container
+        flex-direction: column
+        flex-wrap: nowrap
+        align-items: center
+
+    .brands__container
+        flex-direction: column
+
+    .block__link
+        padding: 0
+
+    .book
+        &__row
+            flex-direction: column-reverse
+            row-gap: 30px
+        &__desc
+            width: 100%
+            align-items: center
+        &__text
+            width: 100%
+
+    .footer
+        &__container
+            justify-content: space-between
+            padding-left: 40px
+        &__socials
+            flex-basis: 40%
