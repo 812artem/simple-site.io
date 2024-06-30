@@ -879,6 +879,10 @@ body {
     align-items: center;
   }
 
+  .block__text {
+    margin: 0
+  }
+
   .brands__container {
     flex-direction: column;
   }
